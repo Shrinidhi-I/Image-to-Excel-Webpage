@@ -1,0 +1,184 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.app {
+  text-align: center;
+  margin: 20px;
+  padding: 10px;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 800px;
+}
+
+header {
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.image-upload {
+  margin-bottom: 40px;
+  width: 100%;
+  display: flex;
+  align-items: center; /* Align items side by side */
+  justify-content: center; /* Center align items horizontally */
+}
+
+.drop-zone {
+  width: 100%;
+  max-width: 300px;
+  height: 200px;
+  border: 2px dashed #ccc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px; /* Add some space between drop zone and image preview */
+  padding: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: #0510ee;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+button:hover {
+  background-color: #82dcf0;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.custom-file-upload {
+  display: inline-block;
+  padding: 5px 10px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  margin-top: 25%;
+  transition: background-color 0.3s ease;
+}
+
+.custom-file-upload:hover {
+  background-color: #0056b3;
+}
+
+.steps {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.step {
+  width: 100%;
+  max-width: 200px;
+  padding: 5px 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.step h2 {
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+.loading {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.result {
+  margin-top: 40px;
+  width: 100%;
+}
+
+.data-frame {
+  max-width: 100%;
+  overflow-x: auto;
+  margin: 0 auto;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.image-preview {
+  width: 100%;
+  max-width: 300px;
+  height: 200px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-preview img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.delete-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #ff6347;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 50%;
+  font-size: 1em;
+}
+
+.delete-button:hover {
+  background: #ff4500;
+}
+
+@media (min-width: 768px) {
+  .steps {
+    flex-wrap: nowrap;
+  }
+
+  .step {
+    width: 30%;
+  }
+}
